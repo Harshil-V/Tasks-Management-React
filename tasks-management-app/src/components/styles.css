@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 .input {
     display: flex;
     width: 75%;
@@ -7,6 +9,8 @@
 
 .input__box {
     font-size: medium;
+    font-family: 'Nunito';
+    font-weight: bold;
     width: 100%;
     border: 1px solid #000000;
     border-radius: 100px;
@@ -24,27 +28,119 @@
 }
 
 .input__submit {
+    font-size: medium;
+    font-family: 'Nunito';
     position: absolute;
-    right: 3px; 
-    top: 3px;
-    bottom: 3px;
-    border: 0;
-    background: #000000;
+    right: 5px; 
+    top: 5px;
+    bottom: 5px;
+    border: 1px solid #000000;
+    background: rgba(0, 63, 146, 0.819);
     color: #fff;
     outline: none;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 15px;
     border-radius: 100px;
     z-index: 2;
 }
 
-@media (max-width: 800px) {
+.input__submit:hover {
+    background-color: rgba(0, 84, 194, 0.803);
+}
+
+.input__submit:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 3px black;
+}
+
+.tasks {
+    gap: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 73%;
+    flex-wrap: wrap;
+}
+
+.tasks__single {
+    display: flex;
+    
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: 0.2s;
+    background-color:rgb(129, 168, 202);
+}
+
+.tasks__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+  }
+
+.tasks__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.tasks__single--text:focus {
+    outline: none;
+}
+
+.icon__group {
+    display: flex;
+    align-items:center;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .tasks {
+      width: 95%;
+    }
+
+    .icon {
+        margin-left: 7px;
+        font-size: 20px;
+    }
+  }
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+
     .input__box {
-        font-size:medium;
+        font-size:small;
         padding: 10px 100px 10px 20px; 
     }
 
     .input__submit {
+        font-size:small;
         padding: 0 15px;
     }
+
+    .tasks {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .tasks__single {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tasks__single--text {
+        font-size: 15px;
+    }
+
+    .icon {
+        font-size: medium;
+    }
+    
 }
