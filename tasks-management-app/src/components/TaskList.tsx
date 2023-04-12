@@ -1,7 +1,7 @@
 import React from 'react'
-import './styles.css';
 import { Task } from '../models';
 import SingleTask from './SingleTask';
+import './styles.css';
 
 interface Props {
     tasks: Task[];
@@ -11,7 +11,7 @@ interface Props {
 const TaskList:React.FC<Props>  = ({tasks, setTasks}) => {
     return (
         <div className='tasks'>
-            {tasks.map(task => (
+            { tasks.map(task => (
                 <SingleTask 
                 task={task} 
                 key={task.id} 
